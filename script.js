@@ -20,11 +20,18 @@
         .then( (json) => arrayOfTodos = json)
     }
     
+
     const logTodos = () => {
         console.log(arrayOfTodos)
     }
     
     const populateTodos = () => {
-    
+        for (let i = 0; i <= arrayOfTodos.length -1; i++){
+        const o = document.getElementById("todo-list")
+        const listItem = document.createElement("li")
+        const title = document.createTextNode(arrayOfTodos[0].title)
+        listItem.appendChild(title)
+        o.appendChild(listItem)
+        }
     }
 
